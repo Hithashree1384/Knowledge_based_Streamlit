@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Python virtual environment
+.venv/
+
+# Byte-compiled / cache
+__pycache__/
+
+# FAISS index directory
+faiss_index/
+
+# Editor files
+*.pyc
+.vscode/
