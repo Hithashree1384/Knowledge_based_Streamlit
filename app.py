@@ -9,6 +9,28 @@ from rag_pipeline import (
     DB_PATH
 )
 
+# If deployed on Streamlit Cloud, allow providing the Google service-account JSON
+# via `st.secrets['GOOGLE_SERVICE_ACCOUNT']`. If present, write it to a
+# temporary file and set `GOOGLE_APPLICATION_CREDENTIALS` so Google client
+# libraries pick it up for ADC.
+try:
+    if hasattr(st, "secrets") and "GOOGLE_SERVICE_ACCOUNT" in st.secrets:
+        import json
+
+        sa = st.secrets["GOOGLE_SERVICE_ACCOUNT"]
+        sa_json = sa if isinstance(sa, str) else json.dumps(sa)
+        sa_path = "/tmp/service-account.json"
+        with open(sa_path, "w", encoding="utf-8") as _f:
+            _f.write(sa_json)
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = sa_path
+        st.info("Loaded Google service account from Streamlit secrets")
+except Exception as _e:
+    # Non-fatal; continue without ADC if not provided
+    try:
+        st.warning(f"Could not load Google service account from secrets: {_e}")
+    except Exception:
+        pass
+
 st.set_page_config(page_title="KnowledgeBase Agent", layout="wide")
 st.title("📚 Company KnowledgeBase RAG Agent")
 
