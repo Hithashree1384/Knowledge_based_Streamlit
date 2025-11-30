@@ -40,13 +40,16 @@ cd KnowledgeBase_Agent_RAG
 Install Dependencies:
 Bash
 pip install -r requirements.txt
+
 Set Up API Key:
 Create a file named .env in the root directory.
 Add your Google API key to the file:
 GOOGLE_API_KEY=AIzaSyCr2RUwcl-dgteSJ3zc5yA9XAoQzODrgdI
+
 Run the Application:
 Bash
 streamlit run app.py
+
 Use the Agent: The app will open in your browser. Upload one or more PDF files in the sidebar and click "Build/Rebuild Knowledge Base (KB)". Once successful, you can ask questions in the chat interface.
 
 5. Potential Improvements
