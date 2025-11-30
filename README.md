@@ -53,7 +53,11 @@ streamlit run app.py
 Use the Agent: The app will open in your browser. Upload one or more PDF files in the sidebar and click "Build/Rebuild Knowledge Base (KB)". Once successful, you can ask questions in the chat interface.
 
 5. Potential Improvements
+
 Asynchronous Processing: Implement ingestion using asyncio to improve UI responsiveness during KB building.
+
 Scalable Vector DB: Replace FAISS with a cloud Vector DB (like Pinecone or Weaviate) for persistence and multi-user support.
+
 Structured Output: Use LangChain's structured output capability to extract key facts from the documents in JSON format.
+
 Advanced RAG: Implement advanced techniques like Reranking or Self-Querying for improved retrieval accuracy.
