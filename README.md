@@ -18,7 +18,9 @@ Single Turn: Does not maintain deep conversational history (each query is treate
 
 Export to Sheets
 3. Tech Stack & APIs Used
+
 Category	Component	Details
+
 AI Models	Gemini-2.5-flash (LLM), Gemini-embedding-001 (Embeddings)	Used for answer generation and document vectorization.
 Frameworks	LangChain	The primary orchestration framework for the RAG pipeline.
 Vector DBs	FAISS	Used as the local, high-performance vector storage and retrieval mechanism.
@@ -32,7 +34,9 @@ To run this agent locally, follow these steps:
 Clone the Repository:
 Bash
 git clone https://github.com/Hithashree1384/Knowledge_based_Streamlit.git
+
 cd KnowledgeBase_Agent_RAG
+
 Install Dependencies:
 Bash
 pip install -r requirements.txt
