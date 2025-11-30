@@ -23,17 +23,23 @@ Local Storage: Vector Index (FAISS) is stored locally on disk (faiss_index/) and
 
 Single Turn: Does not maintain deep conversational history (each query is treated independently).
 
-
 Export to Sheets
-3. Tech Stack & APIs Used
+
+
+3. Tech Stack & APIs Used:
 
 Category	Component	Details
 
 AI Models	Gemini-2.5-flash (LLM), Gemini-embedding-001 (Embeddings)	Used for answer generation and document vectorization.
+
 Frameworks	LangChain	The primary orchestration framework for the RAG pipeline.
+
 Vector DBs	FAISS	Used as the local, high-performance vector storage and retrieval mechanism.
+
 UI	Streamlit	Provides the interactive web interface for file upload and chat.
+
 APIs	Google GenAI API	Requires a valid GOOGLE_API_KEY for all model operations.
+
 Export to Sheets
 
 
