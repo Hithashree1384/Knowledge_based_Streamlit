@@ -8,13 +8,19 @@ It provides grounding for the LLM's responses, ensuring answers are factual, tra
 Section	Description
 Features	:
 Document Upload: Supports multiple PDF files via a Streamlit interface.
+
 Semantic Search: Uses vector embeddings to find contextually relevant information.
+
 Flexible Backend: Configured for high performance using Gemini-2.5-flash and Google Embeddings (with optional fallback to OpenAI).
+
 Source Attribution: Provides the source file name and page number for every answer.
+
 
 Limitations	
 PDF Only: Currently supports only PDF files for ingestion.
+
 Local Storage: Vector Index (FAISS) is stored locally on disk (faiss_index/) and must be rebuilt if documents change.
+
 Single Turn: Does not maintain deep conversational history (each query is treated independently).
 
 
@@ -28,8 +34,9 @@ Frameworks	LangChain	The primary orchestration framework for the RAG pipeline.
 Vector DBs	FAISS	Used as the local, high-performance vector storage and retrieval mechanism.
 UI	Streamlit	Provides the interactive web interface for file upload and chat.
 APIs	Google GenAI API	Requires a valid GOOGLE_API_KEY for all model operations.
-
 Export to Sheets
+
+
 4. Setup & Run Instructions
 To run this agent locally, follow these steps:
 
@@ -53,6 +60,7 @@ Bash
 streamlit run app.py
 
 Use the Agent: The app will open in your browser. Upload one or more PDF files in the sidebar and click "Build/Rebuild Knowledge Base (KB)". Once successful, you can ask questions in the chat interface.
+
 
 5. Potential Improvements
 
