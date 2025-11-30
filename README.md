@@ -1,10 +1,12 @@
 1. Overview of the Agent
+
 This KnowledgeBase Agent is a Retrieval-Augmented Generation (RAG) system designed to answer specific questions based on a user's uploaded company documents (PDFs).
 It provides grounding for the LLM's responses, ensuring answers are factual, traceable, and free from common hallucinations.
 
 3. Features & Limitations
+
 Section	Description
-Features	
+Features	:
 Document Upload: Supports multiple PDF files via a Streamlit interface.
 Semantic Search: Uses vector embeddings to find contextually relevant information.
 Flexible Backend: Configured for high performance using Gemini-2.5-flash and Google Embeddings (with optional fallback to OpenAI).
